@@ -1,0 +1,58 @@
+@mixin card1-novedades {
+  margin: 15px;
+  color: $color-white;
+  border: 1px solid $color-white;
+  background-image: radial-gradient(ellipse 250px 100px, $color-radial-gra);
+  display: flex;
+  flex-direction: column;
+  grid-area: card1;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 15px;
+}
+
+@mixin card2-novedades {
+  margin: 15px;
+  color: $color-white;
+  border: 1px solid $color-white;
+  background-image: radial-gradient(ellipse 250px 100px, $color-radial-gra);
+  display: flex;
+  flex-direction: column;
+  grid-area: card1;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 15px;
+}
+
+// animaciones
+
+@mixin slide-izqadere{
+  position: relative;
+  animation: slideIn 2s forwards;
+  @keyframes slideIn {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  
+  }
+}
+
+@mixin slide-lento{
+  position: relative;
+  animation: slideIn 3s forwards;
+  @keyframes slideIn {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  
+  }
+}
+

@@ -1,0 +1,496 @@
+// INDEX
+main .main {
+    max-width: 1200px;
+
+    section {
+        width: 100%;
+        font-size:$font-size-extralarge;
+        display: flex;
+        flex-direction: column;
+        text-align: $alinear-texto;
+        text-decoration-color: $color-radial-gra;
+        padding: 15px;
+        color: $color-negro;
+        box-shadow: $color-boxshadows;
+        margin: auto;
+    }
+}
+
+div .carousel-inner {
+    padding: 0px;
+
+    .carousel-item {
+        padding: 0px;
+        img {
+            height: 500px;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+    }
+    .carousel-caption .btn a {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+
+.container__tittle_h1 {
+    text-decoration: $subrayado;
+    @include slide-izqadere
+}
+
+.container__text {
+    flex-flow: wrap;
+    text-align: $alinear-texto;
+    color: $color-parrafo-principales;
+    margin: 4px;
+    font-size: $font-size-extralarge;
+    @include slide-izqadere
+}
+
+
+.nosotros__container h1 {
+    font-size: $font-size-extra-extra-large;
+    color: $color-negro;
+    text-decoration: none;
+    box-shadow: 5px 5px 20px $color-boxshadows;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px $color-boxshadows;
+    transition: transform 0.1s ease;
+    background-color: $color-background;
+    margin-bottom: 20px;
+    @include slide-lento
+}
+
+.card:hover {
+    background: linear-gradient(to bottom, $color-background 100%, $color-negro 0%), radial-gradient(at top center, $color-background 0%, rgba(0, 0, 0, 0.061) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    transform: scale(1.1);
+}
+
+.card-boostrap {
+    text-align: $alinear-texto;
+}
+
+// FIN-PRIMER INDEX
+
+// INDEX SEGUNDO-NOVEDADES
+.novedades-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "card1 img"
+        "card2 img";
+
+    @media (max-width:($ancho*2)) {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "img"
+            "card1"
+            "card2"
+        ;
+    }
+
+    .card1__novedades {
+        @include card1-novedades;
+
+        &:hover {
+            background: linear-gradient(to bottom, $color-background 1%, $color-parrafo-principales 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+            background-blend-mode: multiply, multiply;
+
+            .h2__novedades {
+                color: $color-white;
+                text-decoration: $subrayado;
+                text-align: $alinear-texto;
+                padding: 10px;
+
+                @media(max-width:768px) {
+                    color: $color-white;
+                    text-decoration: $subrayado;
+                    text-align: $alinear-texto;
+                    padding: 10px;
+                }
+
+                .p__novedades {
+                    color: $color-white;
+                    flex-wrap: wrap;
+
+                    @media (min-width:768px) {
+                        color: $color-white;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        @include slide-izqadere
+    }
+
+    .card2__novedades {
+        @include card2-novedades;
+
+        &:hover {
+            background: linear-gradient(to bottom, $color-background 1%, $color-parrafo-principales 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+            background-blend-mode: multiply, multiply;
+
+            .h2__novedades {
+                color: $color-white;
+                text-decoration: $subrayado;
+                text-align: $alinear-texto;
+                padding: 10px;
+
+                @media(max-width:780px) {
+                    color: $color-white;
+                    text-decoration: $subrayado;
+                    text-align: $alinear-texto;
+                    padding: 10px;
+                }
+
+                .p__novedades {
+                    color: $color-white;
+                    flex-wrap: wrap;
+
+                    @media (min-width:768px) {
+                        color: $color-white;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+
+        }
+
+        @include slide-izqadere
+    }
+
+
+    .card2__novedades {
+        margin: 15px;
+        border: 1px solid $color-white;
+        color: $color-white;
+        background-image:
+            radial-gradient(ellipse 250px 100px,
+                $color-radial-gra);
+        display: flex;
+        flex-direction: column;
+        grid-area: card2;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        padding: 15px;
+
+        &:hover {
+            background: linear-gradient(to bottom, $color-background 1%, $color-parrafo-principales 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+            background-blend-mode: multiply, multiply;
+
+            .h2__novedades {
+                color: $color-white;
+                text-decoration: $subrayado;
+                text-align: $alinear-texto;
+                padding: 10px;
+
+                @media(max-width:768px) {
+                    color: $color-white;
+                    text-decoration: $subrayado;
+                    text-align: $alinear-texto;
+                    padding: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+.img__novedades {
+    width: 80%;
+    margin-top: 10px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    grid-area: img;
+    border: 1px solid $color-white;
+    transition: transform 0.1s ease;
+
+
+    &:hover {
+        transform: scale(1.1);
+
+    }
+
+    @include slide-izqadere
+}
+
+// FIN-INDEX SEGUNDO-NOVEDADES
+
+// TERCER INDEX -SERVICIOS
+.tittle_serv.text-center {
+    text-decoration: $subrayado;
+    color: $color-negro;
+    @include slide-izqadere
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.text-center.my-5.title-sub {
+    color: $color-parrafos;
+}
+
+.card-img-top {
+    height: 250px;
+    border: 1px solid $color-negro;
+    transition: transform 0.1s ease;
+
+    &:hover {
+        transform: scale(1.0);
+    }
+}
+
+.card-body {
+    background-color: $color-background;
+
+    .card-title .bsdark-border-subtle {
+        font-size: $font-size-extralarge;
+        font-weight: 900;
+    }
+
+    .card-text {
+        color: $color-parrafos-cards;
+    }
+}
+
+// FIN-TERCER INDEX -SERVICIOS
+
+
+//  CUARTO INDEX -PROFESIONALES
+.profesionals-container-section {
+    width: 100%;
+    color: $color-white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.box-profesionales {
+    background-image:
+        radial-gradient(circle, $color-radial-gra);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 40px;
+
+    .titulo-profesionales {
+        text-align: $alinear-texto;
+        text-decoration: none;
+        margin: 2px;
+        color: $color-negro;
+        text-decoration: $subrayado;
+
+        .presentacion-profe {
+            color: $color-white;
+            font-size: $font-size-large;
+            border: 1px solid $color-white;
+            padding: 5px;
+            margin: 5px;
+            background-color: $color-negro;
+        }
+
+        @include slide-izqadere
+    }
+
+}
+
+.profesionales-cards {
+    @include slide-lento;
+    background-color: $color-profesionalescards;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3% 3%;
+    transition: transform 0.1s ease;
+    margin: 10px;
+    
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .nombres-profes {
+        color: $color-white;
+        font-size: $font-size-large;
+        text-align: $alinear-texto;
+        padding: 2px;
+        margin-bottom: 1px;
+    }
+
+    .area {
+        text-align: $alinear-texto;
+        color: $color-white;
+    }
+
+    .img-profess {
+        width: auto;
+        height: 380px;
+        border-radius: 2% 2%;
+
+        &:hover {
+            border: 1px solid $color-background;
+
+        }
+    }
+}
+
+//  CUARTO INDEX -PROFESIONALES
+
+// INICIO QUINTO INDEX -CONTACTO
+
+.contacto-container {
+    padding: 90px 15px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "titulo titulo"
+        "formu mapa"
+    ;
+    justify-self: self-start;
+
+    @media(max-width:768px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas:
+            "titulo"
+            "formu"
+            "mapa";
+    }
+
+    .titulo-seccion {
+        margin-bottom: 20px;
+        grid-area: titulo;
+        text-decoration: $subrayado;
+        color: $color-negro;
+        @include slide-izqadere
+    }
+
+    .contenedor-form {
+        max-width: 1100px;
+        padding-top: 22px;
+        margin: auto;
+        grid-area: formu;
+    }
+}
+
+.contenedor-form .fila {
+    margin-bottom: 15px;
+}
+
+.contenedor-form .mitad {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-form input,
+.contenedor-form textarea {
+    padding: 10px;
+    border-radius: 0px;
+    border: none;
+    border: 1px solid $color-background;
+}
+
+.contenedor-form .mitad input {
+    width: 48%;
+}
+
+.contenedor-form .input-full {
+    width: 100%;
+}
+
+.titulo-seccion {
+    text-align: $alinear-texto;
+    text-transform: uppercase;
+    color: $color-negro;
+    text-decoration: $subrayado;
+    text-decoration-color: $color-background;
+    text-decoration-thickness: 5px;
+}
+
+.btn-enviar {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    padding: 10px 15px !important;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    color: $color-white;
+}
+
+.mapa {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    grid-area: mapa;
+}
+
+.redes {
+    border: 1px solid $color-negro;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.redes i {
+    font-size: $font-size-extralarge;
+    text-align:$alinear-texto;
+
+    @media (max-width:1024px) {
+        font-size: $font-size-large;
+    }
+
+    @media (max-width:768px) {
+        font-size:$font-size-medium;
+    }
+
+    @media (max-width:480px) {
+        font-size:$font-size-small;
+    }
+
+    @media (max-width:370px) {
+        font-size: $font-size-super-small;
+    }
+}
+
+.redes .iconos-redes {
+    @media (max-width:1024px) {
+        font-size: $font-size-large;
+    }
+
+    @media (max-width:768px) {
+        font-size: $font-size-medium;
+    }
+
+    @media (max-width:480px) {
+        font-size: $font-size-medium;
+    }
+
+    @media (max-width:370px) {
+        font-size: $font-size-small;
+    }
+}

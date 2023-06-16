@@ -1,0 +1,26 @@
+.navbar {
+  color: #fff;
+  font-weight: 700px;
+  width: 100%;
+
+  a {
+    color: #FFF;
+    font-weight: 700px;
+    text-align: center;
+
+    &:hover {
+      color: #0059ab;
+    }
+  }
+  .navbar-toggler{
+    border: 1px solid #1d0fef52;
+    background-color: #fff;
+    &:focus{
+      box-shadow: none;
+    }
+}
+}
+
+.collapse.navbar-collapse {
+  flex-grow: inherit;
+}
